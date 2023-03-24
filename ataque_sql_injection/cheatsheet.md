@@ -36,7 +36,7 @@ metodo_2: ' UNION SELECT NULL--
 > Microsoft, MySQL & PostgreSQL
 
 ' UNION SELECT 'a',NULL,NULL,NULL-- \
-' UNION SELECT NULL,'a',NULL,NULL-- | se tiene que hacer iterativo cambiando los campos para saber que tipo son.
+' UNION SELECT NULL,'a',NULL,NULL-- | >> se tiene que hacer iterativo cambiando los campos para saber que tipo son.
 
 > Oracle
 
