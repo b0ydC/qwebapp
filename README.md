@@ -1,6 +1,6 @@
 # Q' WEB APPLICATION PENTESTING PROCESS | "QWEBAPP"
 
-"QWEBAPP, es un repositorio de informacion a consultar si se esta preparando para las certificaciones eWPT, eWPTx2, OSWE, etc... el mundo web de una manera ofensiva" 
+"QWEBAPP, es un repositorio de informacion a consultar si se esta preparando para las certificaciones eWPT, eWPTx2, OSWE, Burp Suite Certified etc... el mundo web de una manera ofensiva" 
 
 DISCLAIMER !
 
