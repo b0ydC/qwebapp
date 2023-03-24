@@ -49,14 +49,14 @@ MySQL >> SELECT @@version \
 Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
 PostgreSQL >> SELECT version() 
 
-### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft / MySQL / PostgreSQL] 
+### LISTAR TABLAS DE LA BASE DE DATOS / [[Microsoft](https://learn.microsoft.com/en-us/sql/relational-databases/system-information-schema-views/tables-transact-sql?view=sql-server-ver16) / MySQL / PostgreSQL] 
 
 SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- \
 SELECT [columns] FROM information_schema.columns 
 
 SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
 
->>> NOTA: revisar cual es la estructura del "information_schema" por motor.
+> NOTA: revisar cual es la estructura del "information_schema" por motor.
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
 
