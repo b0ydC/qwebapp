@@ -20,7 +20,7 @@
   </div>
   <div class="col-md-4" markdown="1">
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
-  <img height="300px" class="center-block" src="https://user-images.githubusercontent.com/39641738/227452658-2e61cbbc-9c9a-4953-bbf6-2b04dba020c1.png">
+  <img height="300px" src="https://user-images.githubusercontent.com/39641738/227452658-2e61cbbc-9c9a-4953-bbf6-2b04dba020c1.png">
   </div>
 </div>
 
