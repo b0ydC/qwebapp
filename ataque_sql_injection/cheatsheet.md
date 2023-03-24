@@ -56,7 +56,7 @@ SELECT [columns] FROM information_schema.columns
 
 SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
 
-  NOTA: revisar cual es la estructura del "information_schema" por motor.
+> NOTA: revisar cual es la estructura del "information_schema" por motor.
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
 
