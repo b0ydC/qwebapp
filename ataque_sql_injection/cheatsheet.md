@@ -28,7 +28,7 @@ pre-req: numero de columnas y data type de cada columna
 
 ### COMO SABER EL NUMERO DE COLUMNAS ?
 
-metodo_1: ' ORDER BY 1-- 
+metodo_1: ' ORDER BY 1-- \
 metodo_2: ' UNION SELECT NULL--
 
 ### COMO SABER EL DATA TYPE DE UNA COLUMNA ?
