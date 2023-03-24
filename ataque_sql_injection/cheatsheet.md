@@ -64,7 +64,7 @@ USER-- | *cuando se tiene un usuario se podria probar la vulnerabilidad tratando
 
 #### MOSTRAR INFORMACION DE OTRAS TABLAS 
 
-' UNION SELECT username, password FROM [table_name]-- \
+' UNION SELECT [columns] FROM [table_name]-- \
 ' UNION SELECT username, password FROM users--
 
 #### MOSTRAR MULTIPLES VALORES EN UNA MISMA COLUMNA [CONCATENACION]
