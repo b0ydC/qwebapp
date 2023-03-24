@@ -58,9 +58,9 @@ SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbq
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
 
-SELECT [columns] FROM all_tables \
+SELECT [columns] FROM all_tables 
 
-SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' \
+SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' 
 
 ### MOSTRAR INFORMACION DE OTRAS TABLAS [importante!]
 
