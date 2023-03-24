@@ -86,5 +86,7 @@ ex: 'string'||'string'
 MySQL: [ ] "space" \
 ex: 'string' 'string'
 
+## BLIND SQL INJECTION
+
 
 
