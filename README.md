@@ -2,8 +2,6 @@
 
 "QWEBAPP, es un repositorio de informacion a consultar si se esta en preparacion para las certificaciones eWPT, eWPTx2, OSWE, Burp Suite Certified etc... el mundo web de manera ofensiva" 
 
-![alt-text-1](https://user-images.githubusercontent.com/39641738/227451979-4962acf1-993a-44c8-96e0-211c1f16286c.png "title-2") ![alt-text-2](https://user-images.githubusercontent.com/39641738/227450469-2d9d88de-bdc2-44ed-914b-22d73b2768bb.png "title-3")
-
  <div class="row">
   <div class="column">
     <img src="https://user-images.githubusercontent.com/39641738/227451979-4962acf1-993a-44c8-96e0-211c1f16286c.png"  width="300" height="290">
