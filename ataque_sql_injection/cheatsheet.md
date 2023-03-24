@@ -11,16 +11,16 @@
 ## COMENTARIOS "bypass"
 
 -- | *dentro del lenguaje de SQL query, sirve para comentar de manera que todo lo que este despues de los simbolos, se ignora.* \
-  ex: SELECT [columns] FROM products WHERE category = 'Gifts'--' AND released = 1
+ex: SELECT [columns] FROM products WHERE category = 'Gifts'--' AND released = 1
 
 '#' | *dentro del lenguaje de SQL query "#", sirve para comentar de manera que todo lo que este despues del simbolo, se ignora.* \
-  ex: SELECT [columns] FROM products WHERE category = 'Gifts'#' AND released = 1
+ex: SELECT [columns] FROM products WHERE category = 'Gifts'#' AND released = 1
 
 ## LOGIC BYPASS 
 
 ' OR 1=1-- | *sirve para crear una consulta a un resultado booleano, de manera que el inicio de la consulta es leido, el resto no ya que
 es siempre TRUE.* \
-  ex: SELECT [columns] FROM products WHERE category = 'Gifts' OR 1=1-- AND released = 1
+ex: SELECT [columns] FROM products WHERE category = 'Gifts' OR 1=1-- AND released = 1
 
 USER-- | *cuando se tiene un usuario se podria probar la vulnerabilidad tratando de ver si hace bypass sin ingresar la contrasena.*
 
