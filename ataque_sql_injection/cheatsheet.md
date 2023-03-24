@@ -55,7 +55,7 @@ SELECT [columns] FROM information_schema.tables \
 SELECT [columns] FROM information_schema.columns \
 SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
 
-### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
+### LISTAR TABLAS DE LA BASE DE DATOS / [[Oracle](https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/ALL_TABLES.html)] 
 
 SELECT [columns] FROM all_tables \
 SELECT [columns] FROM all_tab_columns WHERE table_name = 'USERS' 
