@@ -16,11 +16,11 @@
 
 <div class="row">
   <div class="col-md-8" markdown="1">
-  <img height="600px" class="center-block" src="https://user-images.githubusercontent.com/39641738/227450469-2d9d88de-bdc2-44ed-914b-22d73b2768bb.png">
+  <img height="300px" class="center-block" src="https://user-images.githubusercontent.com/39641738/227450469-2d9d88de-bdc2-44ed-914b-22d73b2768bb.png">
   </div>
   <div class="col-md-4" markdown="1">
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
-  <img height="600px" class="center-block" src="https://user-images.githubusercontent.com/39641738/227452658-2e61cbbc-9c9a-4953-bbf6-2b04dba020c1.png">
+  <img height="300px" class="center-block" src="https://user-images.githubusercontent.com/39641738/227452658-2e61cbbc-9c9a-4953-bbf6-2b04dba020c1.png">
   </div>
 </div>
 
