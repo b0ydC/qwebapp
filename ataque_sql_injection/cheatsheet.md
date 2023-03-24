@@ -46,9 +46,9 @@ _IDENTIFICAR INFORMACION DEL MOTOR DE BASE DE DATOS [TIPO/VERSION]
 
   NOTA: debe ser UNION attack. numero de columnas se respeta.
 
-Microsoft >> SELECT @@version
-MySQL >> SELECT @@version
-Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance
+Microsoft >> SELECT @@version \
+MySQL >> SELECT @@version \
+Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
 PostgreSQL >> SELECT version()
 
 
