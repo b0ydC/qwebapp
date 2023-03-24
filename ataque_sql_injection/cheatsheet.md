@@ -8,7 +8,7 @@
 
 ' -- | *simbolo comun para testear si existe SQLi o no.*
 
-## COMENTARIOS "ignora"
+## COMENTARIOS "bypass"
 
 -- | *dentro del lenguaje de SQL query, sirve para comentar de manera que todo lo que este despues de los simbolos, se ignora.* \
 ex: SELECT [columns] FROM products WHERE category = 'Gifts'--' AND released = 1
