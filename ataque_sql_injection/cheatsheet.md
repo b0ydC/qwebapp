@@ -90,8 +90,8 @@ ex: 'string' 'string'
 
 --> funcion substring
 
-Oracle	SUBSTR('string', 4, 2) \
-Microsoft	SUBSTRING('string', 4, 2) \
-PostgreSQL	SUBSTRING('string', 4, 2) \
-MySQL	SUBSTRING('string', 4, 2)
+Oracle:	SUBSTR('string', 4, 2) \
+Microsoft:	SUBSTRING('string', 4, 2) \
+PostgreSQL:	SUBSTRING('string', 4, 2) \
+MySQL:	SUBSTRING('string', 4, 2)
 
