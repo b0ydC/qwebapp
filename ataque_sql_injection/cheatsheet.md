@@ -88,6 +88,16 @@ ex: 'string' 'string'
 
 ## BLIND SQL INJECTION
 
+  NOTA: importante analizar el comportamiento del site. 
+
+Validar la existencia de una tabla por medio de una consulta booleana, limitando el resultado para no romper la consulta.
+
+' and select '[value]' from [table_name] LIMIT 1)='[value]'--
+
+Una vez con el nombre de la tabla, se puede consultar fields especificos cambiando el query y agregando la funcion WHERE:
+
+' and select [field] from [table_name] where [field]='[value]')='[value]'--
+
 --> funcion substring
 
 Oracle:	SUBSTR('string', 4, 2) \
