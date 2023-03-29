@@ -90,6 +90,12 @@ ex: 'string' 'string'
 
     NOTA: importante analizar el comportamiento del site. 
 
+1. validar la vulnerabilidad con una consulta booleana
+2. validar existencia de tabla
+3. validar campos
+4. enumerar el tamano del campo (length)
+5. enumerar el contenido de un campo (caracteres)
+
 Validar la existencia de una tabla por medio de una consulta booleana, limitando el resultado para no romper la consulta.
 
 ' AND SELECT '[value]' FROM [table_name] LIMIT 1)='[value]'--
