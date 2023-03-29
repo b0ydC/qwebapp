@@ -88,7 +88,7 @@ ex: 'string' 'string'
 
 ## BLIND SQL INJECTION
 
-  NOTA: importante analizar el comportamiento del site. 
+    NOTA: importante analizar el comportamiento del site. 
 
 Validar la existencia de una tabla por medio de una consulta booleana, limitando el resultado para no romper la consulta.
 
