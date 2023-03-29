@@ -69,7 +69,7 @@ USER-- | *cuando se tiene un usuario se podria probar la vulnerabilidad tratando
 
 #### MOSTRAR MULTIPLES VALORES EN UNA MISMA COLUMNA [CONCATENACION]
 
-> NOTA: importante definir la columna que sea formato string.
+    NOTA: importante definir la columna que sea formato string.
 
 ~: separador
 
