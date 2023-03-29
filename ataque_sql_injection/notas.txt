@@ -88,4 +88,14 @@ Microsoft	SUBSTRING('string', 4, 2)
 PostgreSQL	SUBSTRING('string', 4, 2)
 MySQL	SUBSTRING('string', 4, 2)
 
+Para blind sql injection attacks, la primera prueba es booleana. FALSE/TRUE
 
+_Como confirmar la existencia de X tabla ?
+
+revisar el comportamiento del site es indispensable para identificar mejor si se explotando un ataque "blind sql injection". este query va a comprobar por medio de una consulta booleana si existe la tabla "table_name", limitando el resultado a 1 de manera que no falle el query.
+
+' and select 'x' from table_name LIMIT 1)='x'--
+
+de igual manera consultar fields especificos seria simplemente cambiando el query y agregando la funcion WHERE, de la siguiente forma.
+
+' and select [field] from [table_name] where [field]='[value]')='[value]'--
