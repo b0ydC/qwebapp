@@ -127,8 +127,8 @@ El primer numero, por ejemplo, "4", es la posicion a iterar. el segundo numero e
 
 ' AND SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a'--
 
-    NOTA: Por ejemplo para iterar una posible contrasena se debe cambiar la posicion y el valor final a igual, 
-    en este caso el numero "1" y la letra "a".
+    NOTA: Por ejemplo para iterar una posible contrasena se debe cambiar la posicion y el valor final, en este caso el 
+    numero "1" y la letra "a".
 
 
 
